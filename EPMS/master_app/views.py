@@ -15,6 +15,11 @@ from django.core.mail import send_mail
 #pwo = PasswordGenerator()
 #write your views below
 
+#Index page
+def index(request):
+    return render(request, 'Index.html')
+
+
 #Login Deccorator
 def org_login_required(function):
     def wrapper(request, *args, **kw):
@@ -88,14 +93,6 @@ def user_login(request):
             return render(request, 'EmpLogin.html', {'msg': "0"})
     else:
         return render(request, 'EmpLogin.html')
-
-
-
-def index(request):
-    return render(request, 'Index.html')
-
-
-
 
 
 def generateOTP():
