@@ -78,6 +78,8 @@ cover/
 # Environments
 .env
 .venv
+.test
+test/
 env/
 venv/
 ENV/
